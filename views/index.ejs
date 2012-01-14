@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dreampass top page</title>
+  </head>
+  <body>
+    <h1>dreampass トップ画面</h1>
+    <p>Welcome to dreampass</p>
+    <% if (!status){ %>
+      <p><a href="/login">ログイン</a></p>
+　　<% }else{ %>
+      <p><a href="/logout">ログアウト</a></p><br>
+      <p><a href="/register">新規ユーザ登録画面</a></p>
+      <p><a href="/distributor">配給会社登録画面</a></p>
+      <p><a href="/theater">映画館登録画面</a></p>
+      <p><a href="/movie_in">作品入力画面</a></p>
+      <p><a href="/theater_in">映画館入力画面</a></p>
+      <p><a href="/option">オプション登録画面</a></p>
+    <% } %> 
+  </body>
+</thml>

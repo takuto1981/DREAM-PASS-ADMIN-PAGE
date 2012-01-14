@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <title>dreampass title input </title>
+  </head>
+  <body>
+    <h1>作品入力画面</h1>
+    <a href="/">トップ </a>&gt; 作品入力画面
+    <br>
+    <div id="register">
+      <form action="/title_in" enctype="multipart/form-data" method="POST">
+        <div id="distributor">
+          <label>配給会社:
+            <select id="company" name="company">
+              <% for(var i=0; i<distribution.length ;i++){ %>
+                <option value="<%= distribution[i]._id %>" >
+                <%= distribution[i].name %></option>
+              <% } %>
+            </select>
+          </label>
+        </div>
+        <div id="title">
+          <label >タイトル:
+            <input type="text" name="name" />
+          </label>
+        </div>
+        <div id="information">
+          <label>作品情報:
+            <textarea name="information" cols= 40/>作品情報を入力してください。</textarea>
+          </label>
+        </div>
+        <div id="price">
+          <label>価格:
+            <input type="number" name="price" />
+          </label>
+        </div>
+        <div id="agreement">
+          <label>契約形態:
+            <input type="text" name="agreement" />
+          </label>
+        </div>
+        <div id="title_image">
+          <label>タイトル画像:
+            <input type="file" name="title_image" multiple="multiple">
+          </label>
+        </div>
+        <div id="trailer">
+          <label>ビデオ予告編</label>
+          <input type="file" name="trailer" multiple="multiple">
+        </div>
+        <div id="upload">
+          <input type="submit" value="送信" /><input type="reset" value="取消" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

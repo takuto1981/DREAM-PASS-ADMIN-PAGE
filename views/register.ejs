@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>dreampass login画面</title>
+    <script src="http://static.ak.fbcdn.net/connect/en_US/core.js"></script>
+  </head>
+  <body>
+    <h1>dreampass ユーザ登録画面</h1>
+    <div id="login">
+      <form action="/register" method="POST">
+          <div id="first">
+          <label for="first">姓</label>
+          <input type="text" name="name.first"/>ドリパス
+        </div>
+        <div id="last">
+          <label for="last">名</label>
+          <input type="text" name="name.last"/>太郎
+        </div>
+        <div id="email">
+          <label for="email">eMail</label>
+          <input type="email" name="email"/>drepastaro@gmail.com
+        </div>
+        <div id="password">
+          <label for="password">Password</label>
+          <input type="password" name="password"/>
+        </div>
+        <div id="role">
+          <label for="role">役割</label>
+          <input type="radio" name="role" value="admin" >管理者
+　　　　　<input type="radio" name="role" value="distri">配給会社
+　　　　　<input type="radio" name="role" value="theater">配給会社
+        </div>
+　　　　<div id="company">
+          <label for="company">会社</label>
+          <input type="text" name="company" />Blume
+        </div>
+        <div id="submit">
+          <input type="submit"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

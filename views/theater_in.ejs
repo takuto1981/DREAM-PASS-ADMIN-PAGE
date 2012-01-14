@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <title>dreampass title input </title>
+  </head>
+  <body>
+    <h1>シフト情報入力画面</h1>
+    <a href="/">トップ</a>　&gt; シフト情報入力画面
+    <h4>個別入力</h4>
+    <div id="shift">
+      <form action="/theater_in" method="POST">
+        <div id="theater">
+          <label>映画館</label>
+          <select id="company" name="company">
+            <% for(var i=0; i<theater.length ;i++){ %>
+              <option value="<%= theater[i]._id %>" >
+              <%= theater[i].name %></option>
+            <% } %>
+          </select>
+        </div>
+        <div id="date">
+          <label>上映可能日時</label>
+          <input type="datetime-local" name="date[start]" />～<input type="datetime-local" name="date[end]" />
+        </div>
+        <div id="price">
+          <label>企画成立価格</label>
+          <input type="number" name="price" />
+        </div>
+        <div id="capacity">
+          <label>キャパシティ</label>
+          <input type="number" name="capacity" />
+        </div>
+        <div id="option">
+          <label>選択可能オプション</label>
+          <% for (var i=0 ; i < option.length ; i++){ %>
+            <input type="checkbox" name="agreement" value = <%= option[i]._id %> />
+            <%= option[i].name %>
+          <% } %>
+        </div>
+        <div id="upload">
+          <input type="submit" value="送信" /><input type="reset" value="取消" />
+        </div>
+      </form>
+      <h4>一括入力</h4>
+      <form action="/theater_in" method="POST">
+        <div id="batch">
+          <label>CSVファイル指定</label>
+          <input type="file" name="batch" multiple="multiple">
+        </div>
+        <div id="submit">
+          <input type="submit" value="送信" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

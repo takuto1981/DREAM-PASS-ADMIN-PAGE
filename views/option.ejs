@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <title>dreampass option registration</title>
+  </head>
+  <body>
+    <h1>オプション登録画面</h1>
+    <a href="/">トップ &gt;</a> オプション登録画面<br>
+    <div id="option">
+      <form action="/option" enctype="multipart/form-data" method="POST">
+        <div id="name">
+          <label >名称:
+            <input type="text" name="name" />
+          </label>
+        </div>
+        <div id="comment">
+          <label>コメント:
+            <textarea type="text" name="comment" ></textarea>
+          </label>
+        </div>
+        <div id="info">
+          <label>アイコン:
+            <input type="file" name="icon" multiple="multiple" />
+          </label>
+        </div>
+        <div id="upload">
+          <input type="submit" value="送信" /><input type="reset" value="取消" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

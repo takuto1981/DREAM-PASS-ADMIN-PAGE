@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <title>dreampass theater registration</title>
+  </head>
+  <body>
+    <h1>映画館登録画面</h1>
+    <a href="/">トップ &gt;</a> 映画館登録画面<br>
+    <div id="theater">
+      <form action="/theater" enctype="multipart/form-data" method="POST">
+        <div id="name">
+          <label >映画館名:
+            <input type="text" name="name" />
+          </label>
+        </div>
+        <div id="code">
+          <label>映画館コード:
+            <input type="text" name="code" />
+          </label>
+        </div>
+        <div id="email">
+          <label>映画館メールアドレス:
+            <input type="email" name="email" />
+          </label>
+        </div>
+        <div id="tel">
+          <label>映画館電話番号:
+            <input type="tel" name="tel" />
+          </label>
+        </div>
+        <div id="address">
+          <label>映画館住所:
+            <input type="text" name="address" />
+          </label>
+        </div>
+        <div id="person">
+          <label>担当（氏名）/（メール）/（電話）:
+            <p><input type="text" name="person[name]" />
+              <input type="email" name="person[emai]" />
+              <input type="tel" name="person[tel]" />
+            </p>
+            <p>
+              <input type="text" name="person[name]" />
+              <input type="email" name="person[emai]" />
+              <input type="tel" name="person[tel]" />
+            </p>
+          </label>
+        </div>
+        <div id="location">
+          <label>位置情報（経度）/（緯度）:
+            <input type="text" name="location[latitude]" /><input type="text" name="location[longitude]" />
+          </label>
+        </div>
+        <div id="icon">
+          <label>映画館アイコン:
+            <input type="file" name="icon" multiple="multiple">
+          </label>
+        </div>
+        <div id="access">
+          <label>交通手段:
+            <textarea name="access" cols=40/></textarea>
+          </label>
+        </div>
+        <div id="bhour">
+          <label>営業時間:
+            <input type="text" name="bhour" />
+          </label>
+        </div>
+        <div id="dayoff">
+          <label>定休日:
+            <input type="text" name="dayoff" />
+          </label>
+        </div>
+        <div id="url">
+          <label>企業ＨＰ:
+            <input type="url" name="url" />
+          </label>
+        </div>
+        <div id="account">
+          <label>口座番号（銀行名）/（口座番号）:
+            <input type="text" name="bank[name]" /><input type="text" name="bank[account]"
+          </label>
+        </div>
+        <div id="submit">
+          <input type="submit" value="送信" ><input type="reset" value="取消" >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
